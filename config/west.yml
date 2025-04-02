@@ -1,10 +1,17 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: mert-kosova
+      url-base: https://github.com/mert-kosova
+      # Additional modules containing boards/shields/custom code can be listed here as well.
+      # See:
+      # - https://zmk.dev/docs/features/modules
+      # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
   projects:
+    - name: eyelash_corne
+      url: https://github.com/mert-kosova/chinese-corne
+      revision: main
     - name: zmk
-      remote: zmkfirmware
+      remote: mert-kosova
       revision: main
       import: app/west.yml
   self:
